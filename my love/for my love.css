@@ -1,0 +1,189 @@
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ff8da1, #ffc3a0);
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Overlay Effect */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.4);
+    pointer-events: none;
+}
+
+/* Header Styling */
+.header {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffdfdf;
+}
+
+/* Photo Section */
+.photo-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.photo-frame {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
+    animation: zoomIn 2s ease forwards;
+}
+
+.photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Words Section */
+.words-section {
+    text-align: center;
+    font-size: 1.4rem;
+    color: #333;
+    margin: 2rem auto;
+    max-width: 700px;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 2s ease-in;
+}
+
+.words-section .romantic-words {
+    line-height: 1.8;
+    font-style: italic;
+    color: #555;
+}
+
+/* Button Styling */
+.button-section {
+    text-align: center;
+    margin: 2rem;
+}
+
+.button-section button {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    background-color: #ff6b81;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.button-section button:hover {
+    background-color: #ff4b5c;
+    transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes zoomIn {
+    from { transform: scale(0.5); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive styling for screens smaller than 768px */
+@media screen and (max-width: 768px) {
+    /* Header */
+    .header h1 {
+        font-size: 2rem;
+        padding: 1.5rem;
+    }
+
+    /* Photo Section */
+    .photo-frame {
+        width: 200px;
+        height: 200px;
+    }
+
+    /* Words Section */
+    .words-section {
+        font-size: 1.2rem;
+        padding: 1rem;
+        margin: 1.5rem auto;
+    }
+
+    /* Button Section */
+    .button-section button {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 1rem;
+        font-size: 0.85rem;
+    }
+}
+
+/* Responsive styling for screens smaller than 480px */
+@media screen and (max-width: 480px) {
+    /* Header */
+    .header h1 {
+        font-size: 1.6rem;
+    }
+
+    /* Photo Section */
+    .photo-frame {
+        width: 150px;
+        height: 150px;
+    }
+
+    /* Words Section */
+    .words-section {
+        font-size: 1rem;
+        padding: 0.8rem;
+        margin: 1rem auto;
+    }
+
+    /* Button Section */
+    .button-section button {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.2rem;
+    }
+
+    /* Footer */
+    .footer {
+        font-size: 0.8rem;
+    }
+}
